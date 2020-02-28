@@ -6,12 +6,7 @@ public abstract class Piece {
     protected  String symbol;
     protected PieceColour colour;
 
-    Piece(int row, int column, String symbol, PieceColour colour){
-        this.row = row;
-        this.column = column;
-        this. symbol = symbol;
-        this.colour = colour;
-    }
+
 
     public String getSymbol(){
         return symbol;
@@ -30,9 +25,15 @@ public abstract class Piece {
         this.column = column;
     }
 
-    public  boolean isLegitMove(int x1, int x2, int y1, int y2){
+//    public  boolean isLegitMove(int x1, int x2, int y1, int y2){
+//
+//    }
 
+    public int getRow() {
+        return row;
     }
 
-
+    public int getColumn() {
+        return column;
+    }
 }
