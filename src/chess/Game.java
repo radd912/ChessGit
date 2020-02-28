@@ -12,6 +12,8 @@ public class Game {
     public static void main(String[] args) {
         Board b = new Board();
         b.initialisePieces();
+        b.movePiece(1,1,4,2,b.getPiece(1,1));
+        b.movePiece(2,0,1,1,b.getPiece(2,0));
         b.printBoard();
 
     }

@@ -64,14 +64,13 @@ public class Board {
     }
 
 
-//    public void movePiece(int i0, int j0, int i1, int j1, Piece p){
-//        if(getPiece(i0,j0).isLegitMove(i0, j0, i1, j1)){
-//            setPiece(i1,j1,getPiece(i0, j0));
-//            board[i0][j0].removePiece();
-//        }
-//        else if(board[i1][j1].hasPiece()) System.out.println("Invalid move");
-//        else System.out.println("Invalid Move");
-//    }
+    public void movePiece(int i0, int j0, int i1, int j1, Piece p){
+        if(p.isLegitMove(i0,j0,i1,j1)) {
+            board[i1][j1].setPiece(getPiece(i0,j0));
+            board[i0][j0].removePiece();
+        }
+        else ;
+    }
 
     public void setPiece(int iIn, int jIn, Piece p){
         board[iIn][jIn].setPiece(p);
