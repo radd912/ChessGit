@@ -1,12 +1,20 @@
 package chess;
 
 public class Queen extends Piece {
+
     public Queen(PieceColour colour){
         super();
-        if(colour == PieceColour.WHITE) setSymbol("♕");
-        if(colour == PieceColour.BLACK) setSymbol("♛");
+        if(colour == PieceColour.WHITE){
+            setSymbol("♕");
+            this.colour = PieceColour.WHITE;
+        }
+        if(colour == PieceColour.BLACK){
+            this.colour = PieceColour.BLACK;
+            setSymbol("♛");
+        }
 
     }
+
 
     @Override
     public boolean isLegitMove(int x1, int x2, int y1, int y2) {

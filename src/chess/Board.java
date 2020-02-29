@@ -3,6 +3,7 @@ package chess;
 public class Board {
     private static Square [][] board = new Square[8][8];
 
+
     public Board(){
         for (int i=0; i<board[0].length; i++){
             for (int j=0; j<board[1].length; j++)
@@ -42,6 +43,8 @@ public class Board {
         setPiece(0, 6, new Knight(PieceColour.BLACK));
         setPiece(7, 1, new Knight(PieceColour.WHITE));
         setPiece(7, 6, new Knight(PieceColour.WHITE));
+
+        Piece.setPieceOnBoard(this);
     }
 
     public void printBoard(){

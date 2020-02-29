@@ -6,8 +6,10 @@ public class Game {
     public Game() {
         Board b = new Board();
         b.initialisePieces();
-        System.out.println(b.movePiece(1,1,6,6,b.getPiece(1,1)));
+        b.movePiece(0,0,1,0,b.getPiece(0,0));
+
         b.printBoard();
+
 //        while (!gameEnd) {
 //            //write the game logic
 //        }

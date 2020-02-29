@@ -5,6 +5,7 @@ public abstract class Piece {
     protected int column;
     protected  String symbol;
     protected PieceColour colour;
+    static Board pieceOnBoard;
 
 
 
@@ -17,12 +18,16 @@ public abstract class Piece {
     }
 
     public PieceColour getColour(){
-        return colour;
+        return this.colour;
     }
 
     public void updateCoordinates(int row, int column){
         this.row = row;
         this.column = column;
+    }
+
+    public static void setPieceOnBoard(Board pieceOnBoard){
+        Piece.pieceOnBoard = pieceOnBoard;
     }
 
     public abstract boolean isLegitMove(int x1, int x2, int y1, int y2);

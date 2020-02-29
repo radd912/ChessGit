@@ -3,8 +3,14 @@ package chess;
 public class King extends Piece {
     public King(PieceColour colour){
         super();
-        if(colour == PieceColour.WHITE) setSymbol("♔");
-        if(colour == PieceColour.BLACK) setSymbol("♚");
+        if(colour == PieceColour.WHITE){
+            setSymbol("♔");
+            this.colour = PieceColour.WHITE;
+        }
+        if(colour == PieceColour.BLACK){
+            setSymbol("♚");
+            this.colour = PieceColour.BLACK;
+        }
 
     }
     @Override
