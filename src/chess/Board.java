@@ -68,12 +68,15 @@ public class Board {
 
 
     public boolean movePiece(int x1, int y1, int x2, int y2, Piece p){
+        boolean state;
+
         if (p.isLegitMove(x1, x2, y1, y2)){
             board[x2][y2].setPiece(p);
             board[x1][y1].removePiece();
-            return true;
+            state = true;
         }
-        else return false;
+        else state = false;
+        return state;
     }
 
     public void setPiece(int iIn, int jIn, Piece p){

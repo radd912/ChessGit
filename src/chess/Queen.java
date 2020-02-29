@@ -18,12 +18,11 @@ public class Queen extends Piece {
 
     @Override
     public boolean isLegitMove(int x1, int x2, int y1, int y2) {
+        boolean canMove = false;
 
-        x1 = Math.abs( x1 );
-        x2 = Math.abs( x2 );
-        y1 = Math.abs( y1 );
-        y2 = Math.abs( y2 );
+        if (Math.abs( x1 - x2) == Math.abs( y1 - y2))  canMove = true;
+        if(x1==x2 || y1 == y2) canMove = true;
 
-        return Math.abs( x1 - x2) == Math.abs( y1 - y2);
+        return canMove;
     }
 }

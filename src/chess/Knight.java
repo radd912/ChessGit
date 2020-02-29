@@ -15,11 +15,25 @@ public class Knight extends Piece {
 
     @Override
     public boolean isLegitMove(int x1, int x2, int y1, int y2) {
-        x1 = Math.abs( x1 );
-        x2 = Math.abs( x2 );
-        y1 = Math.abs( y1 );
-        y2 = Math.abs( y2 );
+        int xdiff = Math.abs(x1 - x2);
+        int ydiff = Math.abs(y1 - y2);
+        boolean canMove = false;
 
-        return Math.abs( x1 - x2) == Math.abs( y1 - y2);
+        if(xdiff ==1){
+            if(ydiff == 2){
+                canMove = true;
+            }
+        }
+        else if ( xdiff == 2) {
+            if ( ydiff == 1) {
+                canMove = true;
+            }
+        }
+        else {
+            canMove = false;
+        }
+
+
+        return canMove;
     }
 }

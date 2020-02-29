@@ -15,11 +15,12 @@ public class King extends Piece {
     }
     @Override
     public boolean isLegitMove(int x1, int x2, int y1, int y2) {
-        x1 = Math.abs( x1 );
-        x2 = Math.abs( x2 );
-        y1 = Math.abs( y1 );
-        y2 = Math.abs( y2 );
+        boolean canMove = false;
 
-        return Math.abs( x1 - x2) == Math.abs( y1 - y2);
+        if (Math.abs( x1 - x2) == Math.abs( y1 - y2))  canMove = true;
+        if(x1==x2 || y1 == y2) canMove = true;
+        if (Math.sqrt((y2 - y1) * (y2 - y1) + (x2 - x1) * (x2 - x1)) > 1) canMove = false;
+
+        return canMove;
     }
 }

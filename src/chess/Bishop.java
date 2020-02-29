@@ -27,8 +27,8 @@ public class Bishop extends Piece {
         if(directionX == 1 && directionY == 1) {
             for(int i = y1; i <= y2;i++ ) {
                 for(int j = x1; j <= x2 ; ++i, ++j ) {
-                    if(pieceOnBoard.getPiece(i,j) != null) {
-                        if (pieceOnBoard.getPiece(i, j).getColour() == colour) canMove = false;
+                    if(pieceOnBoard.getPiece(j,i) != null) {
+                        if (pieceOnBoard.getPiece(j, i).getColour() == colour) canMove = false;
                         else canMove = true;
                     }
                 }
@@ -37,8 +37,8 @@ public class Bishop extends Piece {
         else if(directionX == -1 && directionY == -1) {
             for(int i = y1; i >= y2; i++ ) {
                 for(int j = x1; j >= x2 ; --i, --j ) {
-                    if(pieceOnBoard.getPiece(i,j) != null) {
-                        if (pieceOnBoard.getPiece(i, j).getColour() == colour) canMove = false;
+                    if(pieceOnBoard.getPiece(j,i) != null) {
+                        if (pieceOnBoard.getPiece(j, i).getColour() == colour) canMove = false;
                         else canMove = true;
                     }
                 }
@@ -47,8 +47,8 @@ public class Bishop extends Piece {
         else if(directionX == 1 && directionY == -1) {
             for(int i = y1; i>= y2; i++) {
                 for(int j = x1; j <= x2 ; ++i, --j ) {
-                    if(pieceOnBoard.getPiece(i,j) != null) {
-                        if (pieceOnBoard.getPiece(i, j).getColour() == colour) canMove = false;
+                    if(pieceOnBoard.getPiece(j,i) != null) {
+                        if (pieceOnBoard.getPiece(j, i).getColour() == colour) canMove = false;
                         else canMove = true;
                     }
                 }

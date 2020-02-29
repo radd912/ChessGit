@@ -17,8 +17,8 @@ public class Rook extends Piece {
     public boolean isLegitMove(int x1, int x2, int y1, int y2) {
         boolean canMove = false;
         
-        if (x1 == x2 || y1 == y2)  canMove = true; //rook can only move along x or y axis
-        //checks for same colour
+        if (x1 == x2 || y1 == y2)  canMove = true;
+
         if (pieceOnBoard.hasPiece(x2,y2)) {
             canMove = pieceOnBoard.getPiece(x2, y2).getColour() != colour;
         }
