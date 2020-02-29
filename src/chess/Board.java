@@ -64,12 +64,13 @@ public class Board {
     }
 
 
-    public void movePiece(int i0, int j0, int i1, int j1, Piece p){
-        if(p.isLegitMove(i0,j0,i1,j1)) {
-            board[i1][j1].setPiece(getPiece(i0,j0));
-            board[i0][j0].removePiece();
+    public boolean movePiece(int x1, int y1, int x2, int y2, Piece p){
+        if (p.isLegitMove(x1, x2, y1, y2)){
+            board[x2][y2].setPiece(p);
+            board[x1][y1].removePiece();
+            return true;
         }
-        else ;
+        else return false;
     }
 
     public void setPiece(int iIn, int jIn, Piece p){
@@ -86,9 +87,6 @@ public class Board {
         return board[i][j].hasPiece();
     }
 
-//    public Square getBoard(){
-//        return board[][];
-//    }
 
 
 }

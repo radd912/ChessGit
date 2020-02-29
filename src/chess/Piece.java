@@ -25,13 +25,6 @@ public abstract class Piece {
         this.column = column;
     }
 
-    public   boolean isLegitMove(int x1, int x2, int y1, int y2){return true;};
+    public abstract boolean isLegitMove(int x1, int x2, int y1, int y2);
 
-    public int getRow() {
-        return row;
-    }
-
-    public int getColumn() {
-        return column;
-    }
 }

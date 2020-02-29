@@ -5,7 +5,6 @@ public class Square {
     private int j;
     private boolean hasPiece;
     Piece p;
-    private PieceColour colour;
 
     public Square(int i, int j){
         this.i = i;
@@ -23,7 +22,6 @@ public class Square {
     public void removePiece(){
         this.p = null;
     }
-
 
     public boolean hasPiece(){
         if (p != null) this.hasPiece = true;
