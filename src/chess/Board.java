@@ -48,7 +48,7 @@ public class Board {
     }
 
     public void printBoard(){
-        System.out.print("\n  a b c d e f g h \n");
+        System.out.print("\n   a b c d e f g h \n");
         System.out.print("  -----------------\n");
         for (int i = 0; i < 8; i++) {
             int row = i + 1;
@@ -63,7 +63,7 @@ public class Board {
             System.out.println("  " + row);
         }
         System.out.print("  -----------------");
-        System.out.print("\n  a b c d e f g h \n");
+        System.out.print("\n   a b c d e f g h \n");
     }
 
 
