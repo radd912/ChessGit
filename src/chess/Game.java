@@ -3,7 +3,12 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Game {
-    private static boolean gameEnd = false;
+
+public static void main(String[] args) {
+        Game g = new Game();
+    }    
+
+private static boolean gameEnd = false;
 
     public Game() {
 
@@ -32,7 +37,5 @@ public class Game {
 
     }
 
-    public static void main(String[] args) {
-        Game g = new Game();
-    }
+   
 }
